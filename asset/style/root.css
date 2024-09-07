@@ -1,0 +1,52 @@
+:root{
+    /* !element */
+    --link-color:#212121;
+    --kiosk-Btn-bg-color : #212121;
+    --kiosk-BTn-bg:#eeeeee;
+    --kiosk-Btn-info:#A3A3A3;
+    /* cart */
+    --cart-border:#379AE6;
+    --car-price:#379AE6;
+    --add-to-cart-border:#212121;
+    --offer-color:#ff0000;
+    --img-bottom-border:#ccc;
+    /* bill */
+    --bill-bg-color:#eeee;
+    --bill-important:#212121;
+    --bill-extra-price:#797979cc;
+    /* numeric up down */
+    --nud-border:#ccc; 
+    /* product list */
+    --pl-bg:#f1f1f1;
+    --pl-info:#ccc;
+    --pd-price:#4F7BC1;
+
+    /* !end element */
+    /* scroll Bar */
+    --scroll-bg:#b9d8f0;
+    --scroll-color:#FFB443;
+    --scroll-color-hover:#bd8025;
+
+    /* ads */
+    --adsR:#5DEBD7;    
+    --adsL:#C5FF95;
+    /* kiosk  -> ads show*/
+    --ads-bg-color : #FF7F3E;
+    --ads-text-color : #FFF6E9;
+    --ads-border-color : #604CC3;
+    /* kiosk -> product */
+    --kiosk-Btn-BG-color:#FFB443;
+    --kiosk-Btn-color:#212121;
+    /* numeric up down */
+    --nud-bg:#fff;
+    --nud-plus-bg:#FF7F3E;
+    --nud-mines-bg:#cccc;
+    /* type page */
+    --type-page-bg:#dbdadaee;
+    --k-Btn-Selected:#FF7F3E;
+    /* product page  */
+    --header-bottom-border:#ccc;
+    --cat-border : #212121;
+    /* check out */
+    --product-place-bg : #EEEEEE;
+}

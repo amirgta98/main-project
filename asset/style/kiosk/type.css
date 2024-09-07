@@ -1,0 +1,113 @@
+.type-container{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    max-height: 90vh;
+    overflow: auto;
+    z-index: 2;
+
+}
+.type-container>div{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.type-btn-container{
+    width: 80%;
+    height: 20%;
+    margin: 1% auto;
+}
+.type-bg{
+    background-color: var(--type-page-bg);
+}
+.wave-animetion{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* background: #3586ff; */
+    overflow: hidden;
+    z-index: 1;
+  }
+  .wave-animetion .air{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(../../img/general/wave.png);
+    background-size: 1000px 100px;
+    /* filter: hue-rotate(275deg); */
+  }
+  .wave-animetion .air.air1{
+    animation: wave 30s linear infinite;
+    z-index: 1000;
+    opacity: 1;
+    animation-delay: 0s;
+    bottom: 0;
+  }
+  .wave-animetion .air.air2{
+    animation: wave2 15s linear infinite;
+    z-index: 999;
+    opacity: 0.5;
+    animation-delay: -5s;
+    bottom: 10px;
+  }
+  .wave-animetion .air.air3{
+    animation: wave 30s linear infinite;
+    z-index: 998;
+    opacity: 0.2;
+    animation-delay: -2s;
+    bottom: 15px;
+  }
+  .wave-animetion .air.air4{
+    animation: wave2 5s linear infinite;
+    z-index: 997;
+    opacity: 0.7;
+    animation-delay: -5s;
+    bottom: 20px;
+  }
+  .k-Btn{
+    transition:border 200ms ease;
+  }
+  .pay-K-Btn-selected{
+    border: 0.3vw solid var(--k-Btn-Selected);
+  }
+  .pay-titel{
+    font-size: 4vw;
+    margin-bottom: 2%;
+    top: 0;
+    right: 0;
+    width: 100%;
+  }
+  @keyframes wave{
+    0%{
+      background-position-x: 0px; 
+    }
+    100%{
+      background-position-x: 1000px; 
+    }
+  }
+  @keyframes wave2{
+    0%{
+      background-position-x: 0px; 
+    }
+    100%{
+      background-position-x: -1000px; 
+    }
+  }
+@media screen and (orientation: portrait) {
+    .type-btn-container{
+        width: 95%;
+        height: 15%;
+        margin: 4% auto
+    }
+    .pay-titel{
+      font-size: 7vw;
+    }
+    .pay-K-Btn-selected{
+      border: 0.9vw solid var(--k-Btn-Selected);
+    }
+  }

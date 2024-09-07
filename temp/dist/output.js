@@ -1,1 +1,0 @@
-const htmlFiles = ["E:/work/main project\\index.html", "E:/work/main project\\work space\\Qtv\\ads.html", "E:/work/main project\\work space\\Qtv\\qtv-2product.html", "E:/work/main project\\work space\\Qtv\\qtv-productList.html"];
