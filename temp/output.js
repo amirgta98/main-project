@@ -1,1 +1,1 @@
-const htmlFiles = ["E:/work/main project\\index.html", "E:/work/main project\\QTv\\qtv-2product.html", "E:/work/main project\\QTv\\qtv-productList.html"];
+const htmlFiles = ["E:/work/main project\\index.html", "E:/work/main project\\pos\\pos.html", "E:/work/main project\\QTv\\qtv-2product.html", "E:/work/main project\\QTv\\qtv-productList.html"];
