@@ -6,31 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="temp/dist/output.js"></script> <!-- لود کردن فایل جاوا اسکریپت -->
+    <link id="Css-Cdn" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
 </head>
 
-<body>
-    <!-- <a href="QTv/qtv-productList.html">
-        <h1>type-1</h1>
-    </a>
-    <a href="Qtv/qtv-2product.html">
-        <h1>type-2</h1>
-    </a> -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+<body class="container mt-2 mb-5">
+    <div class="list-group">
+        <a type="button" href="#" class="list-group-item list-group-item-action active" aria-current="true">
+          Qtv
+        </a>
+        <a type="button" href="work space/Qtv/ads.html" class="list-group-item list-group-item-action">1 product</a>
+        <a type="button" href="work space/Qtv/qtv-2product.html" class="list-group-item list-group-item-action">2 Product</a>
+        <a type="button" href="work space/Qtv/qtv-productList.html" class="list-group-item list-group-item-action">Product List</a>
+        
+    </div>
+    <div class="list-group mt-3">
+        <a type="button" href="#" class="list-group-item list-group-item-action active" aria-current="true">
+          Kiosk
+        </a>
+        <a type="button" href="work space/kiosk/checkout.html" class="list-group-item list-group-item-action">check out</a>
+        <a type="button" href="work space/kiosk/daintype.html" class="list-group-item list-group-item-action">dian type</a>
+        <a type="button" href="work space/kiosk/paytype.html" class="list-group-item list-group-item-action">pay type</a>
+        <a type="button" href="work space/kiosk/prodactPage.html" class="list-group-item list-group-item-action">product page</a>
+        <a type="button" href="work space/kiosk/showads.html" class="list-group-item list-group-item-action">show ads</a>
+        <a type="button" href="work space/kiosk/errorpage.html" class="list-group-item list-group-item-action">show ads</a>
+        <a type="button" href="work space/kiosk/errorpage2.html" class="list-group-item list-group-item-action">show ads</a>
+       
+    </div>
+    <div class="list-group mt-3">
+        <a type="button" href="#" class="list-group-item list-group-item-action active" aria-current="true">
+          Pos
+        </a>
+        <a type="button" href="work space/pos/checkout.html" class="list-group-item list-group-item-action">check out</a>
+        <a type="button" href="work space/pos/product.html" class="list-group-item list-group-item-action">product</a>
+        <a type="button" href="work space/pos/user-pos.html" class="list-group-item list-group-item-action">pos user</a>
+       
+    </div>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script>
-        var htmlAddress = htmlFiles;
-        htmlAddress = htmlAddress.filter(path => path !== 'E:/work/main project\\index.html');
-        // htmlAddress = htmlAddress.filter(path => path !== `E:/work/main project\temp\build\temp\xref-temp.html`);
+<script id="Script-Cdn" src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>   
 
-        htmlAddress = htmlAddress.map(path => path.replace('E:/work/main project\\', ''));
-        htmlAddress = htmlAddress.map(path => path.replace(/\\+/g, '/'));
-        htmlAddress.forEach(path => {
-            var htmlString = `<a href="${path}" class="my-link-class " target="_blank">${path}</a> <br/>`;
-            $('body').append(htmlString);
-        });
-
-
-    </script>
 </body>
 
 </html>
