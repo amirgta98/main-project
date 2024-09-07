@@ -1,21 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="temp/output.js"></script> <!-- لود کردن فایل جاوا اسکریپت -->
 </head>
+
 <body>
-    <a href="QTv/qtv-productList.html"><h1>type-1</h1></a>
-    <a href="Qtv/qtv-2product.html"><h1>type-2</h1></a>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- <a href="QTv/qtv-productList.html">
+        <h1>type-1</h1>
+    </a>
+    <a href="Qtv/qtv-2product.html">
+        <h1>type-2</h1>
+    </a> -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script>
-        console.log()
         var htmlAddress = htmlFiles;
-        console.log(htmlAddress)
+        htmlAddress = htmlAddress.filter(path => path !== 'E:/work/main project\\index.html');
+        htmlAddress = htmlAddress.map(path => path.replace('E:/work/main project\\', ''));
+        htmlAddress = htmlAddress.map(path => path.replace(/\\+/g, '/'));
+        htmlAddress.forEach(path => {
+            var htmlString = `<a href="${path}" class="my-link-class " target="_blank">Open ${path}</a> <br/>`;
+            $('body').append(htmlString);
+        });
 
 
-    </script>    
+    </script>
 </body>
+
 </html>
