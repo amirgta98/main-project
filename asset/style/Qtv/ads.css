@@ -1,0 +1,242 @@
+.ads-right-side {
+    width: 67%;
+    background-color: var(--adsR);
+}
+
+.ads-left-side {
+    width: 33%;
+    background-color: var(--adsL);
+}
+.price.offer::before{
+top: 0;
+    }
+    .price{
+        background-color: var(--price-bg);
+        color: var(--price-T-color);
+    }
+.price{
+   font-size: var(--dollar-size);
+}
+.price span{
+    font-size: var(--cent-size);
+ }
+.ads-img-container>div{
+    height: 90%;
+}
+
+.ads-img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    aspect-ratio: 1/1;
+}
+
+.ads-prudact {
+    clip-path: circle(42%);
+    height: 95%;
+    transform: translate(-50%, -50%);
+}
+
+.ads-img:not(.ads-prudact) {
+    height: 107%;
+    transform: translate(-45%, -53%);
+}
+.ads-toping1{
+    animation: pulse 24s infinite;
+}
+.ads-toping2{
+    animation: pulse 24s infinite;
+    animation-direction: reverse;
+
+}
+
+.tex-left-container{
+    height: 80%;
+}
+.tex-left-container div{
+    text-wrap: nowrap;
+}
+.tex-left-container div:nth-child(1) {
+    /* width: 120%; */
+
+}
+
+.ads-solgon {
+    font-size: clamp(40px, 4.3vw,100vw);
+}
+
+.tex-left-container div:nth-child(2) {
+    /* width: 110%; */
+    
+}
+.ads-brands{
+    font-size: clamp(37px, 3.9vw,100vw);
+
+}
+
+.tex-left-container div:nth-child(3) {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.ads-price{
+    font-size: clamp(44px, 8.7vw,100vw);
+    
+}
+.ads-solgon-portrate{
+
+    display: none;      
+    
+}
+.ads-price span{
+    top: 0;
+    right: 0;
+    font-size: clamp(40px, 6vw,100vw);
+    transform: translate(95%);
+}
+
+@media (max-width: 768px) and (orientation: landscape) {
+    .ads-right-side {
+        width: 60%;
+    }
+
+    .ads-left-side {
+        width: 40%;
+    }
+
+    .ads-prudact {
+        height: unset;
+        width: 86%;
+    }
+
+    .ads-img:not(.ads-prudact) {
+        height: unset;
+        width: 100%;
+
+    }
+
+}
+
+@media (max-width: 576px) and (orientation: landscape) {
+    .ads-right-side {
+        width: 55%;
+    }
+
+    .ads-left-side {
+        width: 45%;
+    }
+}
+
+
+
+@media screen and (orientation: portrait) {
+    .ads-right-side {
+        width: 100%;
+        height: 55vh;
+    }
+
+    .ads-left-side {
+        width: 100%;
+        height: 45vh;
+    }
+    .tex-left-container {
+        height: 50%;
+        margin-top: 10%;
+
+    }
+    .tex-left-container div:nth-child(1) {
+        width: 100%;
+        display: none;
+    
+    }    
+    .tex-left-container div:nth-child(2) {
+        width: 100%;
+        order: 3;
+        display: flex;
+        justify-content: center;
+    
+    }
+
+    .ads-brands{
+        font-size: clamp(31px, 7.7vw,100vw);
+        display: inline;
+        transform: translate(-16%);
+    
+    }
+    
+    .tex-left-container div:nth-child(3) {
+        width: 100%;
+        order: 2;
+    }
+    .ads-price {
+        font-size: clamp(44px, 20.7vw,100vw);
+    }
+    .ads-img-container>div{
+        height: 84%;
+    }
+    .ads-solgon-portrate{
+        transform: translate(-22%);
+        height: 12%;
+        z-index: 2; 
+        display: inline-block;
+        font-size: clamp(29px, 7vw,100vw);      
+        
+    }
+    .ads-price span{
+
+        transform: translate(95%,10%);
+        font-size: clamp(39px, 13vw,100vw);
+
+    }
+
+    
+}
+
+/* Landscape */
+@media screen and (orientation: landscape) {}
+@-webkit-keyframes pulse {
+    0%,50%,100%{
+        transform: translate(-46%, -55%);
+        filter: blur(0px);
+        filter: brightness(1);
+        /* z-index: 1; */
+        /* background-color: antiquewhite; */
+
+    }
+    10%,40%{
+        transform: translate(-48%, -53%);
+        filter: blur(0.9px);
+        filter: brightness(0.95);
+
+        /* background-color: aqua; */
+
+
+    }
+    20%,60%{
+        transform: translate(-44%, -57%);
+        filter: brightness(0.93);
+        /* background-color: rgb(234, 215, 250); */
+
+
+
+    }
+    40%,80%{
+        transform: translate(-47%, -55%);
+        filter: blur(1.5px);
+        filter: brightness(0.9);
+        /* z-index: 2; */
+
+        /* background-color: rgb(146, 14, 14); */
+
+
+
+    }
+    90%{
+        transform: translate(-44%, -53%);
+        filter: blur(2px);
+        filter: brightness(0.9);
+        /* background-color: rgb(6, 228, 124); */
+
+    }
+
+    }

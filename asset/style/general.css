@@ -3,6 +3,7 @@
     height: 100vh;
     overflow: hidden;
 }
+
 /* for use this option yo have to set 2 var by name of dollar-size and cent-size in your root part  */
 .price{
     display: inline-flex;
@@ -49,7 +50,7 @@
         text-wrap: nowrap;
         z-index: 2;
         color: #fff;
-        font-size: 1.3vw;
+        font-size: var(--offer-size);
         display: block;
         position: absolute;
         background-color: var(--price-offer);
