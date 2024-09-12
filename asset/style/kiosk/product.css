@@ -1,149 +1,20 @@
-
-.kiosk-header {
-    width: 95%;
-    margin: auto;
-    height: 100%;
+.kiosk-container{
+    display: grid;
+    grid-template-rows:  1fr;
+    grid-template-columns: 73% 1fr;
 }
-.kiosk-cat{
-    width: 20%;
-    height: 100%;
-    overflow: auto;
+.kiosk-container .Order-Btn-container{
+    /* display: none; */
 }
-.kiosk-product{
-    width: 80%;
-    height: 100%;
-
-}
-.kiosk-header-container{
-    height: 14%;
-    width: 100%;
-    border-bottom: 0.2rem solid var(--header-bottom-border);
-}
-.kiosk-logo{
-    height: 63%;
-    aspect-ratio: 1/1;
-    object-fit:scale-down;
-}
-.kiosk-logo-name{
-    font-size:clamp(30px,3vw,100vw) ;
-    margin: 0;
-}
-
-
-/* BTn */
-.kiosk-action-Btns div{
-    background-color: var(--kiosk-Btn-BG-color);
-    height: 40%;
-    aspect-ratio: 1/1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: clamp(10px,0.7rem,1000vw);
-}
-.kiosk-action-Btns div> img {
-    color: var(--kiosk-Btn-color);
-    width: 80%;
-}
-/* product */
-.kiosk-product>div{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    /* gap: 1%; */
-}
-.kiosk-product .kiosk-product-container{
-    flex: 0 0 20%;
-    padding: 1%;
-}
-.kiosk-product-container .kiosk-prudact{
-    width: 100%;
-    aspect-ratio: 1/1.1
-}
-/* cat */
-.kiosk-cat-container{
-    width: 100%;
-    margin-top: 6%;
-
-    /* background-color: bisque; */
-}
-.kiosk-cat-img{
-    width: 50%;
-    margin: auto;
-    border: 0.1rem solid var(--cat-border);
-    overflow: hidden;
-    margin-bottom: 6%;
-
-}
-
-.kiosk-cat-img img{
-width: 100%;
-object-fit: cover;
-aspect-ratio: 1/1;
-border-bottom: 0.5rem var(--cat-border);
-
-}
-.kiosk-cat-img h3{
-    border-top:0.2vw solid var(--cat-border) ;
-}
-.kiosk-cat-name{
-    margin: 0;
-}
-.kiosk-contant{
-    height: 100%;
-}
-.checkoutBtn{
-    position: absolute;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
-    bottom: 3%;    
-    height: 16%;
-    width: 50%;
-    /* background-color:blue ; */
-}
-
-
-@media screen and (orientation: portrait) {
-    .kiosk-logo-name{
-        font-size:clamp(30px,5vw,100vw) ;
-        margin: 0;
+@media (orientation: portrait) {
+    .kiosk-container{
+        display: grid;
+        grid-template-rows:  87% 1fr;
+        grid-template-columns: 69% 1fr;
     }
-    .kiosk-product{
-        width:100%;
-    }
-    .kiosk-header-container{
-        height: 8%;
-    }
-    .kiosk-header {
-        width: 100%;
-    }
-
-    .kiosk-cat{
-        width: 30%;
-    }
-    .kiosk-product{
-        width: 70%;
-    }
-    .kiosk-product .kiosk-product-container{
-        flex: 0 0 33%;
-    }
-    .kiosk-contant{
-        height: 86%;
-    }
-    .checkoutBtn{
-        position: static;
-        transform: translate(0%);
-        width: 100%;
-        padding: 2.5%;
-
-
-    
-    }
-    .kiosk-landskip{
-        width: 100%;
-
-    }
-    .kiosk-space-maker{
-        display: none;
+    .kiosk-container .Order-Btn-container{
+        grid-row: 2; 
+        grid-column:1/3;
+        /* display: block; */
     }
 }
