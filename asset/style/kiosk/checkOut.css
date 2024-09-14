@@ -1,0 +1,38 @@
+.kiosk-checkOut-container{
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    grid-template-rows: 1fr;
+}
+.detile-container{
+    display: grid;
+    grid-template-rows: 80% 1fr;
+}
+.bill{
+    height: fit-content;
+}
+@media (orientation: portrait) {
+    .kiosk-checkOut-container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 30%;
+    } 
+    .detile-container{
+        display: grid;
+        grid-template-rows: 66% 1fr;
+    }
+    .product-container{
+        grid-row: 1;
+    }
+    .bill{
+        height: 100%;
+    }
+}
+
+
+@media (min-aspect-ratio: 1/1) and (max-aspect-ratio: 840/546) {
+    .detile-container {
+        display: grid;
+        grid-template-rows: 87% 1fr;
+    }
+    }
+  

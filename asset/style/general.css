@@ -4,8 +4,10 @@
     --color-bg: #48CFCB;
     --color-hover: #229799;
     --color-dark: #424242;
-    --color-gray: #e4e4e4;
+    --color-gray: #eeeeee;
     --color-des:#8F8F8F;
+    --color-offer:red;
+    --border-size:0.3rem;
 
 }
 
@@ -14,6 +16,10 @@
     height: 100vh;
     overflow: hidden;
 }
+.w-90{
+    width: 90%;
+}
+
 
 /* for use this option yo have to set 2 var by name of dollar-size and cent-size in your root part  */
 .price {
@@ -101,6 +107,9 @@
 .pill {
     border-radius: 50%
 }
+.fit-content{
+    height: fit-content;
+}
 
 /* --------------------------------------- */
 /* -------------font's size--------------- */
@@ -112,17 +121,21 @@
 .font-parent {
     container-type: inline-size;
 }
+/* --------------------------------------- */
+/* -------------font's size--------------- */
+/* --------------------------------------- */
+.box-border{
+    border:  solid var(--border-size) var(--color-des);
+} 
+.box-shadow{
+    box-shadow: 3px -1px 9px 0px rgba(0,0,0,0.43);
+-webkit-box-shadow: 3px -1px 9px 0px rgba(0,0,0,0.43);
+-moz-box-shadow: 3px -1px 9px 0px rgba(0,0,0,0.43);
+}
 
 /* --------------------------------------- */
 /* --------------category----------------- */
 /* --------------------------------------- */
-/* --color-light:#F5F5F5;
-        --color-bg:#48CFCB;
-        --color-hover:#229799;
-        --color-dark:#424242;
-        --color-gray:#ccc;   */
-
-
 
 .catgury-item>div {
     background-color: var(--color-light);
@@ -148,7 +161,7 @@
 /* cat selected */
 .catgury-item.selected>div {
     background-color: var(--color-gray);   
-    border: solid 0.4rem var(--color-hover); 
+    border: solid var(--border-size) var(--color-hover); 
 }
 .catgury-item.selected .ico-container  {
     background-color: var(--color-hover) !important;
@@ -156,6 +169,213 @@
 .catgury-item.selected .ico-container svg {
     fill: var(--color-light) !important;
 }
+/* button  */
+.full-size-button{
+    border: unset;
+    background-color: var(--color-hover);
+    color: var(--color-light);
+    padding: 1%;
+    border-radius: 0 ;
+    border-bottom-right-radius:var(--bs-border-radius-xl)!important ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+.full-size-button:hover{
+    color: var(--color-light);
+}
+.full-size-button h3{
+font-size: 5cqw;
+}
+/* small Btn */
+.btn-main-color{
+    background-color: var(--color-bg) !important;
+    color: var(--color-dark);
+    transition: 0.5s !important;
+}
+.btn-main-color:hover{
+    background-color: var(--color-hover) !important;
+    color: var(--color-light) !important;
+}
+/* product List */
+.product-list-container{
+    display: grid;
+    grid-template-columns: 25% 55% 20%;
+}
+.product-list-container .offer-cuse {
+    font-size: 2.7cqw;
+}
+.product-list-container .offer-info {
+    font-size: 2cqw;
+}
+.product-list-container .offer-persent{
+    font-size: 4cqw;
+}
+.product-list-container .card-star-container svg{
+    width: 3cqw;  
+  }
+  .product-list-container .card-star-container h5{
+    font-size: 2.9cqw;  
+  }
+  .product-list-container .card-name{
+    font-size: 3.4cqw;
+  }
+  .product-list-container .card-info{
+    font-size: 2.3cqw;
+    overflow: hidden;
+text-overflow: ellipsis;
+display: -webkit-box;
+-webkit-line-clamp: 2;
+-webkit-box-orient: vertical;
+    
+  }
+  .product-list-container .card-mark-container{
+    width: 7%;
+  }
+  .product-list-container .price{
+    width: fit-content;
+    font-size: 5cqw;
+  }
+  .product-list-container .price span{
+    width: fit-content;
+    font-size:3cqw;
+  }
+  .product-list-container .price::after {
+    font-size: 3cqw;
+
+}
+.product-list-container .price.card-last-price {
+    width: fit-content;
+    font-size:3cqw;
+    color: var(--color-des);
+    text-decoration: line-through
+  }
+.product-list-container .price.card-last-price span{
+    width: fit-content;
+    font-size:2cqw;
+  }
+  .product-list-container .price.card-last-price::after {
+    font-size:2cqw;
+
+}
+.product-list-container .cart-add-to-cart{
+    width: 28%;
+}
+.items {
+    font-size: 2.5cqw;
+} 
+.items svg {
+    width: 2.5cqw;
+}
+
+.items-container ul>li{
+    background-color: var(--color-light) !important;
+} 
+.items-container ul:nth-child(1)>li h5{
+    font-size: 1.5cqw;
+} 
+.items-container ul:nth-child(2)>li h5{
+    font-size: 1.3cqw;
+} 
+
+.items-container ul ul ul li h5{
+    font-size: 1.15cqw !important;
+} 
+.list-group.lay-one li:last-child{
+    border: none !important;
+}
+/* full size Btn */
+
+.k-img-container{
+    height: 100%;
+    aspect-ratio: 1/1;
+    background-color: var(--color-bg);
+  }
+  .k-img-container img{
+   width: 70%;
+  }
+  .k-Btn{
+    padding: 2%;
+    container-type: size;
+    background-color: var(--color-light);
+  
+  }
+  
+  .k-name{
+    font-size: 32cqh;
+    margin: 0;
+  
+  }
+  .k-info{
+    font-size: 19cqh;
+    margin: 0;
+    color: var( --color-des);
+  
+  }
+  /* bill */
+  .bill{
+    /* container-type: size; */
+    padding: 1.2%;
+  }
+  .bill-tst-container{
+    width: 100%;
+    background-color: var();
+    height:30vh;
+  }
+  
+  .bill-total-price{
+    border-top: var(--color-dark) 1px solid;
+    padding: 0.5% 0;
+  }
+  
+  .bill-extra-price h6{
+    color: var(--color-des);
+    font-size: 1.6cqw;
+      
+  }
+  .bill-total-price h5{
+    font-size: 1.8cqw;
+    
+  }
+
+  /* number up down */
+
+.nud-container:not(.pos-add-to){
+    /* width: 50%; */
+    background-color: var(--color-light);
+    padding: 1%;
+    transition: 1s;
+    user-select: none;
+  
+  }
+  .nud-container>div:not(.pos-add-to){
+    /* background-color: #a30303; */
+    width: 30%;
+    aspect-ratio: 1/1;
+    container-type: size;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .nud-container>div>h5{
+      font-size: 50cqw;
+      margin: 0;
+      padding: 0;
+  }
+  .nud-container>div>img{
+    width: 50cqw;
+  }
+  .nud-plus{
+    background-color: var(--color-hover);
+  }
+  .nud-mines{
+    background-color: var(--color-bg);
+  }
+  .nud-num{
+    text-align: center;
+  }
+
 
 
 
@@ -188,9 +408,86 @@
     .portrait-block {
         display: block;
     }
+    /* Items  */
+    .items-container ul:nth-child(1)>li h5{
+        font-size: 2.5cqw;
+    } 
+    .items-container ul:nth-child(2)>li h5{
+        font-size: 2.3cqw;
+    } 
+    
+    .items-container ul ul ul li h5{
+        font-size: 2.15cqw !important;
+    } 
 
 }
 
 /* --------------------------------------------- */
 /*----------------- prev style-----------------  */
 /*---------------------------------------------- */
+/* cart 1/1 */
+.card-squer{
+
+    border: var(--border-size) solid var(--color-hover);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    overflow: hidden;
+    padding: 5%;
+    
+  }
+  .card-squer *{
+    margin: 0;
+    padding: 0;
+  }
+  .card-squer .card-image{
+    aspect-ratio: 1/1;
+    width: 50%;
+    object-fit: cover;
+    margin: auto;
+    display: block;
+    clip-path: circle(50%);
+  }
+  .card-name{
+    font-size: 9cqw;
+  }
+  .card-info{
+    font-size: 6cqw;
+    color: #A3A3A3;
+  }
+  .card-price{
+    font-size: 8cqw;
+    color: var(--color-bg);
+  }
+  .card-star-container svg{
+    width: 8cqw;  
+  }
+  .card-star-container h5{
+    font-size: 8cqw;  
+  }
+  .cart-add-to-cart{
+    width: 14cqw;
+    border: 0.1rem solid var(--color-dark);
+    aspect-ratio: 1/1;
+    border-radius: 1000vw;
+  }
+  .offer-cuse {
+    font-size: 10cqw;
+}
+.offer-info {
+    font-size: 8cqw;
+}
+.offer-persent {
+    font-size: 12cqw;
+    color: var(--color-offer);
+}
+.offer-cuse, .offer-info, .offer-persent {
+    text-wrap: nowrap;
+}
+.card-image-container {
+    border-bottom: 0.1rem solid var(--color-dark);
+}
+.card-offer {
+    width: 30%;
+    z-index: 1;
+}
