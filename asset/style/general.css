@@ -110,6 +110,9 @@
 .fit-content{
     height: fit-content;
 }
+.fit-content-W{
+  width: fit-content !important;
+}
 
 /* --------------------------------------- */
 /* -------------font's size--------------- */
@@ -233,6 +236,9 @@ display: -webkit-box;
   .product-list-container .card-mark-container{
     width: 7%;
   }
+  .product-list-container .card-mark-container img{
+    width: 3cqw;
+  }
   .product-list-container .price{
     width: fit-content;
     font-size: 5cqw;
@@ -263,7 +269,7 @@ display: -webkit-box;
     width: 28%;
 }
 .items {
-    font-size: 2.5cqw;
+    font-size: 2.5cqw !important;
 } 
 .items svg {
     width: 2.5cqw;
@@ -285,6 +291,44 @@ display: -webkit-box;
 .list-group.lay-one li:last-child{
     border: none !important;
 }
+/* product list acordian style */
+.product-list-container .items{
+  cursor: pointer;
+  background-color: unset !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+.accordion-button::after{
+  width: 20%;
+}
+/* full row product */
+.full-row-product{
+  border: solid var(--border-size) var(--color-hover);
+}
+.full-row-product .card-info{
+  font-size: 2.2cqw;
+-webkit-line-clamp: 5 !important;
+  
+}
+.full-row-product  .product-list-container{
+  display: grid;
+  grid-template-columns: 25% 40% 1fr;
+}
+.full-row-product .card-price{
+  font-size: 3.5cqw;
+}
+.full-row-product .card-name{
+  font-size: 2.9cqw;
+}
+.full-row-product  .product-list-container .cart-add-to-cart{
+  width: 13%;
+}
+.full-row-product  .product-list-containe .card-price-container{
+  height: 90%;
+}
+/* .full-row-product  .card-mark-container{
+  width: 5% !important;
+} */
 /* full size Btn */
 
 .k-img-container{
@@ -490,4 +534,7 @@ display: -webkit-box;
 .card-offer {
     width: 30%;
     z-index: 1;
+}
+.card-squer .card-mark-container img {
+  width: 8cqw;
 }

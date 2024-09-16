@@ -20,8 +20,9 @@
 
 <body>
 
-<div class="row p-0 m-0 justify-content-center mt-2">
-<div class="product-list-container-box col-6 box-border box-shadow  m-0 p-0  rounded-3">
+<div class="row p-0 m-0 justify-content-center mt-2 gap-3">
+
+<div class="product-list-container-box col-7 box-border box-shadow  m-0 p-0 mb-3  rounded-3 accordion" id="accordionExample">
     <div class="   product-list-container font-parent  align-items-center px-3  ">
         <div class="card-img-container ratio-1-1 d-flex align-items-center overflow-hidden">
             <div class="d-flex card-image-container border-0">
@@ -30,8 +31,8 @@
                     <h2 class="offer-info">lorem ipsum</h2>
                     <h2 class="offer-persent">50%</h2>
                 </div>
-                <img src="../asset/img/burger.png" class="card-image w-100 h-100 object-fit-contain pill " alt="">
-    
+                <img src="../../asset/img/burger.png" class="card-image w-100 h-100 object-fit-contain pill " alt="">
+                
             </div>
         </div>
         <div class="card-info-container d-flex justify-content-center flex-column  p-2">
@@ -68,11 +69,8 @@
                     <img src="../asset/svg/mark/vege1-01.svg" alt="">
                     <img src="../asset/svg/mark/halal.svg" alt="">
                 </div>
-                <div class="d-flex items gap-2 bold ">
+                <div class="d-inline-flex items gap-2 bold accordion-button fit-content-W collapsed " data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" >
                     Items
-                    <svg class="" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.29289 8.29289C4.68342 7.90237 5.31658 7.90237 5.70711 8.29289L12 14.5858L18.2929 8.29289C18.6834 7.90237 19.3166 7.90237 19.7071 8.29289C20.0976 8.68342 20.0976 9.31658 19.7071 9.70711L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L4.29289 9.70711C3.90237 9.31658 3.90237 8.68342 4.29289 8.29289Z" fill="#000000"/>
-                     </svg>
                 </div>
 
             </div>
@@ -88,33 +86,36 @@
 
         </div>
     </div>
-    <div class="d-none box-border w-100 border-start-0 border-end-0 border-bottom-0 items-container">
-        <ul class="list-group">
+    <div class=" box-border w-100 border-start-0 border-end-0 border-bottom-0 items-container accordion-item accordion-collapse collapse  "  id="collapseOne"  >
+        <ul class="list-group accordion accordion-body p-0">
             <li class="list-group-item"><h5>pepsi</h5></li>
             <li class="list-group-item"><h5>frize</h5></li>
-            <li class="list-group-item ">
-                <div class="items justify-content-between d-flex align-items-center">
+            <li class="list-group-item accordion-item ">
+                <div class="items justify-content-between d-flex align-items-center accordion-button collapsed"  data-bs-toggle="collapse" data-bs-target="#Second-subgroup" aria-expanded="true" aria-controls="Second-subgroup">
                     <h5>pizza</h5>
-                    <svg class="" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.29289 8.29289C4.68342 7.90237 5.31658 7.90237 5.70711 8.29289L12 14.5858L18.2929 8.29289C18.6834 7.90237 19.3166 7.90237 19.7071 8.29289C20.0976 8.68342 20.0976 9.31658 19.7071 9.70711L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L4.29289 9.70711C3.90237 9.31658 3.90237 8.68342 4.29289 8.29289Z" fill="#000000"/>
-                     </svg>
                 </div>
-                <ul class="p-0 m-0 rounded-0 list-group lay-one mt-3 ps-2" >
-                    <li class="list-group-item border-start-0 border-end-0"><h5>pepsi</h5></li>
-                    <li class="list-group-item border-start-0 border-end-0"><h5>frize</h5></li>
-                    <li class="list-group-item border-start-0 border-end-0 ">
-                        <div class="items justify-content-between d-flex align-items-center">
-                            <h5>water</h5>
-                            <svg class="" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.29289 8.29289C4.68342 7.90237 5.31658 7.90237 5.70711 8.29289L12 14.5858L18.2929 8.29289C18.6834 7.90237 19.3166 7.90237 19.7071 8.29289C20.0976 8.68342 20.0976 9.31658 19.7071 9.70711L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L4.29289 9.70711C3.90237 9.31658 3.90237 8.68342 4.29289 8.29289Z" fill="#000000"/>
-                             </svg>
-                        </div>
-                        <ul class="p-0 m-0 rounded-0 list-group mt-3 border-0 ps-3"  >
-                            <li class="list-group-item border-start-0 border-end-0"><h5>3</h5></li>
-                            <li class="list-group-item border-start-0 border-end-0"><h5>4</h5></li>
-                          </ul>
-                    </li>
-                  </ul>
+                <div id="Second-subgroup" class="accordion-collapse collapse ">
+                    <ul class="p-0 m-0 rounded-0 list-group lay-one mt-3 ps-2 accordion-body"  >
+                        <li class="list-group-item border-start-0 border-end-0"><h5>pepsi</h5></li>
+                        <li class="list-group-item border-start-0 border-end-0"><h5>frize</h5></li>
+                        <li class="list-group-item border-start-0 border-end-0">
+                            <div class="items justify-content-between d-flex align-items-center accordion-button collapsed " data-bs-toggle="collapse" data-bs-target="#tird-subgroup" aria-expanded="true" aria-controls="tird-subgroup">
+                                <h5>water</h5>
+                                <!-- <svg class="" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4.29289 8.29289C4.68342 7.90237 5.31658 7.90237 5.70711 8.29289L12 14.5858L18.2929 8.29289C18.6834 7.90237 19.3166 7.90237 19.7071 8.29289C20.0976 8.68342 20.0976 9.31658 19.7071 9.70711L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L4.29289 9.70711C3.90237 9.31658 3.90237 8.68342 4.29289 8.29289Z" fill="#000000"/>
+                                 </svg> -->
+                            </div>
+                            <div class="accordion-item accordion-collapse collapse "  id="tird-subgroup">
+                                <ul class="p-0 m-0 rounded-0 list-group mt-3 border-0  accordion-body"  >
+                                    <li class="list-group-item border-start-0 border-end-0"><h5>3</h5></li>
+                                    <li class="list-group-item border-start-0 border-end-0"><h5>4</h5></li>
+                                  </ul>
+                            </div>
+
+                        </li>
+                      </ul>
+                </div>
+
             </li>
           </ul>
     </div>
