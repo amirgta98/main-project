@@ -1,0 +1,79 @@
+{
+    "foods":[
+        {
+          "id": 1,
+          "name": "Margherita Pizza",
+          "bigImgShow":"kebab in <br> best condition of",
+          "location": "Tehran",
+          "image": "https://lapetitepause.ca/media/PepperoniPizza01.jpg",
+          "description": "Classic Italian pizza with cheese and tomato sauce.",
+          "largePrice": 15.11,
+          "smallPrice": 10.66
+          
+        },
+        {
+          "id": 2,
+          "name": "Kebab Koobideh",
+          "location": "Mashhad",
+          "image": "https://lapetitepause.ca/media/MexicanPizza01.jpg",
+          "description": "Popular Iranian kebab made with lamb and aromatic spices.",
+          "largePrice": 20.44,
+          "smallPrice": 12.55
+        },
+        {
+          "id": 3,
+          "name": "Ghormeh Sabzi",
+          "location": "Isfahan",
+          "image": "https://lapetitepause.ca/media/Chicken01.jpg",
+          "description": "Iranian stew made with herbs, beans, and meat.",
+          "largePrice": 18.00,
+          "smallPrice": 11.78
+        },
+        {
+          "id": 4,
+          "name": "Chicken and Rice",
+          "location": "Shiraz",
+          "image": "https://lapetitepause.ca/media/Quebecer01.jpg",
+          "description": "Saffron rice served with tender chicken.",
+          "largePrice": 16.19,
+          "smallPrice": 10.23
+        },
+        {
+          "id": 5,
+          "name": "Fesenjan",
+          "location": "Tabriz",
+          "image": "https://lapetitepause.ca/media/MediterraneanPizza01.jpg",
+          "description": "Pomegranate walnut stew served with rice.",
+          "largePrice": 19.40,
+          "smallPrice": 13.42
+        },
+        {
+          "id": 6,
+          "name": "Ash Reshteh",
+          "location": "Qom",
+          "image": "https://lapetitepause.ca/media/9912de28-546a-4885-bed1-6b65279f90d4.png",
+          "description": "Traditional Iranian soup with beans, herbs, and noodles.",
+          "largePrice": 10.30,
+          "smallPrice": 7.00
+        },
+        {
+          "id": 7,
+          "name": "Baghali Polo",
+          "location": "Rasht",
+          "image": "https://lapetitepause.ca/media/57b4691c-0a4c-4c73-a2e5-802c44928e2a.png",
+          "description": "Rice with dill and broad beans served with lamb.",
+          "largePrice": 17.66,
+          "smallPrice": 12.99
+        },
+        {
+          "id": 8,
+          "name": "Tahchin",
+          "location": "Kerman",
+          "image": "https://lapetitepause.ca/media/bdda48c6-03d2-4b1e-a92e-575a803939ed.jpg",
+          "description": "Layered rice with saffron, yogurt, and chicken.",
+          "largePrice": 14.99,
+          "smallPrice": 9.21
+        }
+      ]
+      
+}

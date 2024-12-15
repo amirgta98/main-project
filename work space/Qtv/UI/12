@@ -1,0 +1,118 @@
+<style>
+    :root{
+        --dollar-size: 2.5cqw;
+        --cent-size: 1.5cqw;
+        --rounded-price-padding: 5%;
+        /* theme */
+        --body-color:#E7E8D1;
+        --name-bg:#A7BEAE;
+        --name-text:#212121;
+        --behind-img:#212121;
+        --price-bg:#B85042;
+        --price-text:#212121;
+
+    }
+</style>
+        <div class="qtvItems">
+            <div class="firstRow">
+                <div class="item-container">
+                    <div class="item position-relative pill">
+                        <div class="priceBox">
+                            <h4 class="m-0 price rounded-price ">$16<span>99</span></h4>
+
+                        </div>
+                        <img src="../../asset/img/burger.png" class="w-100 h-100 object-fit-contain" alt="">
+                        <div class="nameBox rounded-3">
+                            <h3>Pizza Pizaa Court</h3>
+                        </div>
+                    </div>                    
+                </div>
+                <div class="item-container">
+                    <div class="item position-relative pill">
+                        <div class="priceBox">
+                            <h4 class="m-0 price rounded-price ">$16<span>99</span></h4>
+
+                        </div>
+                        <img src="../../asset/img/burger.png" class="w-100 h-100 object-fit-contain" alt="">
+                        <div class="nameBox rounded-3">
+                            <h3>Pizza Pizaa Court</h3>
+                        </div>
+                    </div>                    
+                </div>
+                <div class="item-container">
+                    <div class="item position-relative pill">
+                        <div class="priceBox">
+                            <h4 class="m-0 price rounded-price ">$16<span>99</span></h4>
+
+                        </div>
+                        <img src="../../asset/img/burger.png" class="w-100 h-100 object-fit-contain" alt="">
+                        <div class="nameBox rounded-3">
+                            <h3>Pizza Pizaa Court</h3>
+                        </div>
+                    </div>                    
+                </div>
+                <div class="item-container">
+                    <div class="item position-relative pill">
+                        <div class="priceBox">
+                            <h4 class="m-0 price rounded-price ">$16<span>99</span></h4>
+
+                        </div>
+                        <img src="../../asset/img/burger.png" class="w-100 h-100 object-fit-contain" alt="">
+                        <div class="nameBox rounded-3">
+                            <h3>Pizza Pizaa Court</h3>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+            <div class="SecondRow">
+                <div class="item-container">
+                    <div class="item position-relative pill">
+                        <div class="priceBox">
+                            <h4 class="m-0 price rounded-price ">$16<span>99</span></h4>
+
+                        </div>
+                        <img src="../../asset/img/burger.png" class="w-100 h-100 object-fit-contain" alt="">
+                        <div class="nameBox rounded-3">
+                            <h3>Pizza Pizaa Court</h3>
+                        </div>
+                    </div>                    
+                </div>
+                <div class="item-container">
+                    <div class="item position-relative pill">
+                        <div class="priceBox">
+                            <h4 class="m-0 price rounded-price ">$16<span>99</span></h4>
+
+                        </div>
+                        <img src="../../asset/img/burger.png" class="w-100 h-100 object-fit-contain" alt="">
+                        <div class="nameBox rounded-3">
+                            <h3>Pizza Pizaa Court</h3>
+                        </div>
+                    </div>                    
+                </div>
+                <div class="item-container">
+                    <div class="item position-relative pill">
+                        <div class="priceBox">
+                            <h4 class="m-0 price rounded-price ">$16<span>99</span></h4>
+
+                        </div>
+                        <img src="../../asset/img/burger.png" class="w-100 h-100 object-fit-contain" alt="">
+                        <div class="nameBox rounded-3">
+                            <h3>Pizza Pizaa Court</h3>
+                        </div>
+                    </div>                    
+                </div>
+                <div class="item-container">
+                    <div class="item position-relative pill">
+                        <div class="priceBox">
+                            <h4 class="m-0 price rounded-price ">$16<span>99</span></h4>
+
+                        </div>
+                        <img src="../../asset/img/burger.png" class="w-100 h-100 object-fit-contain" alt="">
+                        <div class="nameBox rounded-3">
+                            <h3>Pizza Pizaa Court</h3>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+
+        </div>

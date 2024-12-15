@@ -1,0 +1,87 @@
+.full-page{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+/* for use this option yo have to set 2 var by name of dollar-size and cent-size in your root part  */
+.price{
+    display: inline-flex;
+    position: relative;
+    font-size: clamp(14px, var(--dollar-size) , 4vw);
+}
+.price::after{
+    content: "66";
+    font-size: clamp(8px, var(--cent-size), 4vw);
+    visibility: hidden;
+
+}
+.price span{
+    position: absolute;
+    inset-inline-end: 0%;
+    top: 0;
+    font-size: clamp(8px, var(--cent-size), 4vw);
+    
+}
+
+.rounded-price{
+    aspect-ratio: 1/1;
+    align-items: center;
+    border-radius: 50%;
+    padding: var(--rounded-price-padding);
+}
+.rounded-price span{
+    top: 27%;
+    inset-inline-end: var(--rounded-price-padding);
+}
+.suqer{
+    text-align: start;
+    background-color: var(--product-info-L);
+    color: #fff;
+    padding: 2%;
+    box-sizing: border-box;
+    aspect-ratio: 1/1;
+}
+.price.offer{
+    background-color: var(--price-offer);
+    }
+    .price.offer::before{
+        content: var(--off-text);
+        text-wrap: nowrap;
+        z-index: 2;
+        color: #fff;
+        font-size: 1.3vw;
+        display: block;
+        position: absolute;
+        background-color: var(--price-offer);
+        top: -15%;
+        inset-inline-start: -6%;
+        border-radius: var(--bs-border-radius-xl);
+        rotate: -10deg;
+        padding: 2% 10%;
+        border: solid 0.3cqw;
+        box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.31);
+        -webkit-box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.31);
+        -moz-box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.31);
+        font-weight: bold;
+        }
+
+@media (orientation: portrait) {
+    .price{
+        font-size: clamp(14px, calc( var(--dollar-size) *2 ), 10cqw);
+    }
+    .price span{
+        font-size: clamp(11px, calc( var(--cent-size) * 2.3 ), 10cqw);        
+    }  
+    .price::after{
+        font-size: clamp(11px, calc( var(--cent-size) * 2.3 ), 10cqw);       
+
+    
+    }
+    .price.offer::before{
+
+        font-size: 3vw;
+
+        }
+
+}
+

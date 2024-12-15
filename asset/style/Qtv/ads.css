@@ -188,6 +188,10 @@ top: 0;
         font-size: clamp(39px, 13vw,100vw);
 
     }
+    .price::after {
+        font-size: var(--cent-size);
+    }
+    
 
     
 }

@@ -107,6 +107,9 @@
 .pill {
     border-radius: 50%
 }
+.pill2{
+  border-radius:100vw;
+}
 .fit-content{
     height: fit-content;
 }
@@ -241,28 +244,28 @@ display: -webkit-box;
   }
   .product-list-container .price{
     width: fit-content;
-    font-size: 5cqw;
+    font-size: var(--dollar-size);
   }
   .product-list-container .price span{
     width: fit-content;
-    font-size:3cqw;
+    font-size:var(--cent-size);
   }
   .product-list-container .price::after {
-    font-size: 3cqw;
+    font-size: var(--cent-size)
 
 }
 .product-list-container .price.card-last-price {
     width: fit-content;
-    font-size:3cqw;
+    font-size: calc(var(--dollar-size) - 0.8cqw);
     color: var(--color-des);
     text-decoration: line-through
   }
 .product-list-container .price.card-last-price span{
     width: fit-content;
-    font-size:2cqw;
+    font-size:calc( var(--cent-size) - 0.5cqw);
   }
   .product-list-container .price.card-last-price::after {
-    font-size:2cqw;
+    font-size:calc( var(--cent-size) - 0.5cqw);
 
 }
 .product-list-container .cart-add-to-cart{
