@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>page_1</title>
-    <link rel="stylesheet" href="style/general.css">
+    <link rel="stylesheet" href="../../asset/style/general.css">
     <link rel="stylesheet" href="../../asset/plugin/Bootstrap/bootstrap.css">
     <link rel="stylesheet" href="../../asset/style/Qtv/smalTobigItems.css">
 
@@ -160,83 +160,116 @@
 
 <script>
 $(document).ready(() => {
-    const $smallItem = $(".small-item");
-    const $bigItemImg = $(".big-image-container img");
-    const $bigItemImgContainer = $(".bigSizeItem-container");
-    let $currentImg = 0;
-    let data = [];
+    // Cache DOM elements
+    const elements = {
+        smallItems: $('.small-item'),
+        bigImage: $('.big-image-container img'),
+        bigContainer: $('.bigSizeItem-container'),
+        nameContainer: $('.name-of-Big-Item'),
+        bigSizePrice: $('.extra-text-container.big-size .price'),
+        smallSizePrice: $('.extra-text-container.small-size .price')
+    };
 
-    // بارگذاری داده‌ها
-    $.getJSON("http://localhost:3000/foods", (response) => {
-        data = response;
+    // State management
+    const state = {
+        currentIndex: 0,
+        data: [],
+        slideInterval: null,
+        sliceTime:3000
+    };
 
-        // اعمال داده‌ها به آیتم‌های کوچک
-        $smallItem.each((index, value) => {
-            if (data[index]) {
-                $(value).find(".small-item-des h5").text(data[index].name);
-                $(value).find(".small-item-des h6").text(data[index].description);
-                $(value).find(".small-item-image img").attr("src", data[index].image);
-                const price = data[index].smallPrice.toString().split(".");
-                const dollar = price[0];
-                const cent = price[1]||"00" ;
-                $(value).find(".small-item-price").html(`$${dollar}<span>${cent}</span>`);
-            }
-        });
+    // Format price helper
+    const formatPrice = (price) => {
+        const [dollars, cents = '00'] = price.toString().split('.');
+        return { dollars, cents };
+    };
 
-        // نمایش اسلاید
-        const updateBigItem = (index) => {
-            if (data[index]) {
-                var nameBigItem= data[index].name;
-                var BigImgItem= data[index].image;
-                // Lar size price
-                const BigItemPrice = data[index].largePrice.toString().split(".");
-                const BigItemDollar = BigItemPrice[0];
-                const BigItemCent = BigItemPrice[1]||"00" ;
-                // small size Price
-                const SmallItemPrice = data[index].smallPrice.toString().split(".");
-                const SmallItemDollar = SmallItemPrice[0];
-                const SmallItemCent = SmallItemPrice[1]||"00" ;
-                // mount
-                $bigItemImg.attr("src",BigImgItem);
-                $(".name-of-Big-Item").text(nameBigItem);
-                $(".extra-text-container.big-size .price").html(`$${BigItemDollar}<span>${BigItemCent}</span>`);
-                $(".extra-text-container.small-size .price").html(`$${SmallItemDollar}<span>${SmallItemCent}</span>`);
+    // Update price display
+    const updatePriceDisplay = (element, price) => {
+        const { dollars, cents } = formatPrice(price);
+        element.html(`$${dollars}<span>${cents}</span>`);
+    };
 
+    // Update small item display
+    const updateSmallItem = (item, data) => {
+        const $item = $(item);
+        $item.find('.small-item-des h5').text(data.name);
+        $item.find('.small-item-des h6').text(data.description);
+        $item.find('.small-item-image img').attr('src', data.image);
+        updatePriceDisplay($item.find('.small-item-price'), data.smallPrice);
+    };
 
-                $smallItem.removeClass("active-item");
-                $($smallItem[index]).addClass("active-item");
-            }
-        };
+    // Update big item display
+    const updateBigItem = (index) => {
+        const item = state.data[index];
+        if (!item) return;
 
-        // تابع تغییر اسلاید
-        const sliderRun = () => {
-            $bigItemImgContainer.addClass("fade-out");
+        elements.bigImage.attr('src', item.image);
+        elements.nameContainer.text(item.name);
+        updatePriceDisplay(elements.bigSizePrice, item.largePrice);
+        updatePriceDisplay(elements.smallSizePrice, item.smallPrice);
+
+        elements.smallItems.removeClass('active-item');
+        elements.smallItems.eq(index).addClass('active-item');
+    };
+
+    // Handle slide transition
+    const handleSlideTransition = () => {
+        elements.bigContainer.addClass('fade-out');
+        
+        setTimeout(() => {
+            updateBigItem(state.currentIndex);
+            elements.bigContainer
+                .removeClass('fade-out')
+                .addClass('fade-in');
+
             setTimeout(() => {
-                updateBigItem($currentImg);
-                $bigItemImgContainer.removeClass("fade-out").addClass("fade-in");
-                setTimeout(() => $bigItemImgContainer.removeClass("fade-in"), 1000);
-
-                $currentImg = ($currentImg + 1) % data.length;
+                elements.bigContainer.removeClass('fade-in');
             }, 1000);
-        };
 
-        // راه‌اندازی اسلایدر
-        sliderRun()
-        const run = setInterval(sliderRun, 3000);
+            state.currentIndex = (state.currentIndex + 1) % state.data.length;
+        }, 1000);
+    };
 
-        // کلیک روی تصاویر کوچک
-        $smallItem.find(".small-item-image img").click((event) => {
-            clearInterval(run); // توقف اسلایدر هنگام کلیک
-            const index = $smallItem.index($(event.target).closest(".small-item"));
-            $currentImg = index;
-            updateBigItem(index);
+    // Start slider
+    const startSlider = () => {
+        handleSlideTransition();
+        state.slideInterval = setInterval(handleSlideTransition, state.sliceTime);
+    };
+
+    // Handle small item click
+    const handleSmallItemClick = (event) => {
+        clearInterval(state.slideInterval);
+        const index = elements.smallItems.index($(event.target).closest('.small-item'));
+        state.currentIndex = index;
+        updateBigItem(index);
+    };
+
+    // Initialize slider
+    const initializeSlider = (data) => {
+        state.data = data;
+
+        // Initialize small items
+        elements.smallItems.each((index, item) => {
+            if (data[index]) {
+                updateSmallItem(item, data[index]);
+            }
         });
 
-        // نمایش آیتم اول
-        updateBigItem($currentImg);
-    });
-});
+        // Set up click handlers
+        elements.smallItems.find('.small-item-image img').on('click', handleSmallItemClick);
 
+        // Initialize first item and start slider
+        updateBigItem(state.currentIndex);
+        startSlider();
+    };
+
+    // Fetch and initialize
+    $.getJSON('http://localhost:3000/foods', initializeSlider)
+        .fail((error) => {
+            console.error('Failed to fetch food data:', error);
+        });
+});
 </script>
 
 </html>
